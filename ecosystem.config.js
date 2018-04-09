@@ -6,7 +6,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'deba',
-      host : '54.38.243.11:747',
+      host : '54.38.243.11',
       ref  : 'origin/master',
       repo : 'https://github.com/adesombergh/deploy-test.git',
       path : '/var/www/deploy-test',
