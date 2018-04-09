@@ -14,7 +14,7 @@ module.exports = {
       ],
       ref  : 'origin/master',
       repo : 'https://github.com/adesombergh/deploy-test.git',
-      path : '/var/www/deploy-test',
+      path : '/var/www/deploy-test/',
       'post-deploy' : 'pm2 reload ecosystem.config.js'
     }
   }
