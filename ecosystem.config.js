@@ -6,7 +6,12 @@ module.exports = {
   deploy : {
     production : {
       user : 'deba',
-      host : '54.38.243.11',
+      host : [
+        {
+          host: '54.38.243.11',
+          port: '747'
+        }
+      ],
       ref  : 'origin/master',
       repo : 'https://github.com/adesombergh/deploy-test.git',
       path : '/var/www/deploy-test',
