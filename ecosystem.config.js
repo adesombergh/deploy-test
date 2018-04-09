@@ -1,29 +1,8 @@
 module.exports = {
-  /**
-   * Application configuration section
-   * http://pm2.keymetrics.io/docs/usage/application-declaration/
-   */
-  apps : [
-
-    // First application
-    {
-      name      : 'TEST',
-      script    : 'app.js',
-      env: {
-        COMMON_VARIABLE: 'true'
-      },
-      env_production : {
-        NODE_ENV: 'production'
-      }
-    }
-
-
-  ],
-
-  /**
-   * Deployment section
-   * http://pm2.keymetrics.io/docs/usage/deployment/
-   */
+  apps : [{
+    name      : 'TEST',
+    script    : 'app.js',
+  }],
   deploy : {
     production : {
       user : 'deba',
@@ -31,8 +10,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://github.com/adesombergh/deploy-test.git',
       path : '/var/www/deploy-test',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js'
     }
-
   }
 };
